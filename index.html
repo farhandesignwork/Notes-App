@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Notes App</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        h2 {
+            color: #1e293b;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 18px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .logout {
+            background: #dc2626;
+        }
+
+        .logout:hover {
+            background: #b91c1c;
+        }
+
+        .note {
+            background: #eff6ff;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 6px;
+            overflow-wrap: anywhere;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #welcomeMessage {
+            overflow-wrap: anywhere;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Notes App</h1>
+
+        <!-- Login Screen -->
+        <div id="loginScreen">
+            <h2>Login</h2>
+
+            <input
+                type="text"
+                id="nameInput"
+                placeholder="Enter your name"
+            >
+
+            <button id="loginBtn">Login</button>
+        </div>
+
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen" class="hidden">
+            <h2 id="welcomeMessage"></h2>
+
+            <button id="logoutBtn" class="logout">Logout</button>
+
+            <hr>
+
+            <h2>Add a Note</h2>
+
+            <input
+                type="text"
+                id="noteInput"
+                placeholder="Write your note here"
+            >
+
+            <button id="addNoteBtn">Add Note</button>
+
+            <h2>My Notes</h2>
+
+            <div id="notesList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
